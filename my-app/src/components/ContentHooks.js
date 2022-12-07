@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import css from "./css/Content.module.css";
 import {savedPosts} from "../posts.json";
-import PostItem from "./PostItem";
+import PostItemAPI from "./PostItemAPI";
 import Loader from "./Loader";
 
 function ContentHooks() {
@@ -42,7 +42,7 @@ function ContentHooks() {
             <div className={css.SearchResults}>
                 {
                     isLoaded ?
-                    <PostItem savedPosts={fetchedPosts} />
+                    <PostItemAPI savedPosts={fetchedPosts} />
                     : <Loader />
 
                 }  
